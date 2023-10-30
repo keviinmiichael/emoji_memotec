@@ -1,15 +1,141 @@
+@font-face {
+  font-family: 'emojifont';
+  src: url('./assets/Gotham Ultra.otf') format('truetype');
+}
+
+*{
+  margin :0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
 body {
-    font-family: sans-serif;
+    font-family: gotham system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
+    display: grid;
+    grid-template-areas: 
+      "navbar"
+      "main"
+      "footer";
+    grid-template-rows: 65px 1fr 50px ;
+    height: 100vh;
+    background-color: rgba(135, 135, 135, 0.245);
+  }
+
+  .navbar{
+    grid-area: navbar ;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(rgb(7,141,233),rgba(0, 14, 72, 0.827));
+    
+  }
+
+  .tittle{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    display: flex;
+    margin: 0;
+    color: white;
+    font-family: 'emojifont';
+  }
+
+  .welcome{
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    display:flex ;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 15px;
   }
   
-  .card {
-    width: 200px;
-    height: 300px;
-    perspective: 600px;
+
+
+  .main{
+    grid-area:  main;
+    display: flex;
+    flex-direction: column;
+    gap: 5;
+    align-items: center;
+    justify-content: center
+    /* flex-wrap: wrap; */
+  }    
+
+  .points{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;  
+  }
+
+  .score{
+    font-size: 1.3rem;
+  }
+
+  .attempts{
+    font-size: 1rem;
+  }
+
+  .game{
+    grid-area:  main;
+    display: flex;
+    gap: 1;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .footer{
+    background-color: rgb(45, 96, 183);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: footer;
+    
+  }
+
+
+/* CSS */
+.reset {
+  background: linear-gradient(steelblue, lightsteelblue);
+  border-radius: 12px;
+  /* color: #f4e603; */
+  color: #f4e603;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 30%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.reset:not(:disabled):hover,
+.reset:not(:disabled):focus {
+  outline: 0;
+  background: linear-gradient(rgb(68, 162, 239), rgb(141, 175, 219));
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+
+.reset:disabled {
+  filter: saturate(0.2) opacity(0.5);
+  -webkit-filter: saturate(0.2) opacity(0.5);
+  cursor: not-allowed;
+}
+
+.card {
+    width: 60px;
+    height: 80px;
+    perspective: 60px;
     margin: 1rem;
+    #f4e603
   }
   
   .content {
@@ -23,23 +149,25 @@ body {
   .front,
   .back {
     position: absolute;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(black, gray);
+    width: 60px;
+    height: 80px;
+    /* background: linear-gradient(steelblue, lightsteelblue); */
+    background: linear-gradient(rgb(7,141,233),rgba(0, 14, 72, 0.827));
     display: grid;
     place-content: center;
-    font-size: 8rem;
+    font-size: 2rem;
     border-radius: 1rem;
     backface-visibility: hidden;
     user-select: none;
   }
   
   .back {
-    background: linear-gradient(steelblue, lightsteelblue);
+    /* background: linear-gradient(steelblue, lightsteelblue); */
+    background: linear-gradient(rgb(7,141,233),rgba(0, 14, 72, 0.827));
     transform: rotateY( 180deg );
   }
   
   .card.flipped .content {
     transform: rotateY( 180deg ) ;
     transition: transform 0.5s;
-  }
+  } 
