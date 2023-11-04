@@ -1,14 +1,23 @@
+import { cardCreator } from './cardsCreator.js';
+import { turn } from './scoreHandler.js';
+
+cardCreator();
+
+const reload = () =>{
+  location.reload();
+}
+
 const cards = document.querySelectorAll(".card");
-
-const reveal = (e) => {
-  const currentCard = e.currentTarget;
-  currentCard.classList.add("flipped");
-
-  setTimeout(() => {
-    currentCard.classList.remove("flipped");
-  }, 1000);
-};
+const cross = document.querySelector(".icon-button")
+const modalButton = document.querySelector(".button")
+const footerButton = document.querySelector(".in-footer")
 
 for (const card of cards) {
-  card.addEventListener("click", reveal);
+  card.addEventListener("click", turn);
 }
+
+
+cross.addEventListener("click", reload)
+modalButton.addEventListener("click", reload)
+footerButton.addEventListener("click", reload)
+
