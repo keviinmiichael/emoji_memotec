@@ -16,7 +16,6 @@ for (const card of cards) {
   card.addEventListener("click", turn);
 }
 
-
 cross.addEventListener("click", reload)
 modalButton.addEventListener("click", reload)
 footerButton.addEventListener("click", reload)

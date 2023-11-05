@@ -30,7 +30,7 @@ const gameFinished = () =>{
 }
 
 const showResults = () =>{
-  const modal = document.querySelector(".modal")
+  const modal = document.querySelector("#finishModal")
   const msg = document.querySelector(".msg")
   if (gameFinished()) {
     msg.innerHTML = `Has achieved ${score} correct answers out of ${attempts} attempts.`
@@ -42,7 +42,6 @@ const showResults = () =>{
 
 export const turn = (e) => {
   const currentCard = e.currentTarget;
-  console.log(currentCard.className.includes("turned"));
 
   if (!buffer.receiveElement(currentCard) || currentCard.className.includes("turned")) {
     return false;
