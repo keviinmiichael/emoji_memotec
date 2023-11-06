@@ -5,6 +5,10 @@ const showScore = document.querySelector(".score");
 let score = 0;
 let attempts = 0;
 
+const url = new URL(window.location.href);
+const params = url.searchParams;
+export const userName = params.get("name");
+
 const buffer = new Buffer();
 
 const solveDifference = () =>{
@@ -32,7 +36,9 @@ const gameFinished = () =>{
 const showResults = () =>{
   const modal = document.querySelector("#finishModal")
   const msg = document.querySelector(".msg")
+  const nameModal = document.querySelector(".nameModal")
   if (gameFinished()) {
+    nameModal.innerHTML = `Excellent ${userName}!`
     msg.innerHTML = `Has achieved ${score} correct answers out of ${attempts} attempts.`
     modal.classList.remove("off")
     modal.classList.add("on")

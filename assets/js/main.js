@@ -1,5 +1,16 @@
 import { cardCreator } from './cardsCreator.js';
-import { turn } from './scoreHandler.js';
+import { turn, userName } from './scoreHandler.js';
+
+
+
+
+if (userName.length === 0) {
+  window.location.href = window.location.origin;
+}
+
+const salute = document.querySelector(".welcome")
+salute.innerHTML = `Hola ${userName}`
+
 
 cardCreator();
 
