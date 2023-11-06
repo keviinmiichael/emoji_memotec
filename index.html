@@ -7,61 +7,30 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbarHome">
       <h1 class="tittle">Emoji memotec</h1>
-    </nav>
-    
-    <main class="main">
-      <h3 class="welcome">Hola </h3>
-      <div class="points">
-        <h2 class="score">Score: 0 </h2>
-        <h2 class="attempst">Attempts: 0 </h2>
-      </div>
-    
-      <section class="game">
+    </nav>    
+    <main class="mainHome">
+
+        <h1 class="gameHome">Emoji Pairs</h1>
+        <h3 class="description">Entrena tu memoria con este juego de memoria de emoji. Haz clic para ver los emoji y haz clic en el mismo emoji para eliminar un par.</h3>
+      
+      <section class="name-container">
+        <h3>Escribe tu nombre para jugar</h3>
+        <form>
+          <input type="name" placeholder="escribe tu nombre">
+        </form>
 
       </section>
-
-      <div class="modal off" id="finishModal">
-        <article class="modal-container">
-          <header class="modal-container-header">
-            <h1 class="modal-container-title">
-              GAME OVER!
-            </h1>
-            <button class="icon-button">
-              ❌
-            </button>
-          </header>
-          <section class="modal-container-body rtf">
-            <h2 class="msg"> </h2>
-          </section>
-          <footer class="modal-container-footer">
-            <button class="button reset">RESTART GAME</button>
-          </footer>
-        </article>
-      </div>
-
-      <!-- <div class="modal" id="startModal">
-        <article class="modal-container">
-          <header class="modal-container-header">
-            <h1 class="modal-container-title">
-              Hi User!
-            </h1>
-          </header>
-          <section class="modal-container-body rtf">
-            <h3> Tell me your name to conitnue </h3>
-            <form action="/" id="formName">
-              <input type="text" name="name" >
-              <button type="submit" class="reset">Let's Go!</button>
-            </form>
-          </section>
-        </article>
-      </div> -->
+    
       
     </main>
-    <footer class="footer">
-      <button class="reset in-footer">Reset</button>
+    <footer class="footerHome">
+      <button class="btn" href="index.html">GO GAME</button>
     </footer>
     <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/home.js"></script>
 </body>
 </html>
+
+<!-- <button class="btn" href="/index.html?name=' + name + '">GO GAME</button> -->

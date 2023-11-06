@@ -1,0 +1,15 @@
+{
+  "name": "emoji_memotec",
+  "version": "1.0.0",
+  "description": "First group project for the 'Hack a Boss' bootcamp on full stack web developer.",
+  "main": "index.js",
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
