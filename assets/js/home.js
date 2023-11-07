@@ -13,7 +13,7 @@ form.addEventListener('submit', (e)=>{
   const userName = input.value.trim();
 
   if(userName.length === 0){
-    label.classList.add('omrs-input-danger')
+    label.classList.add('error')
     span.innerHTML = 'Please compelte your name'
     return false;
   }

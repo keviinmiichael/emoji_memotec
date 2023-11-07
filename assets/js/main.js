@@ -9,7 +9,7 @@ if (userName.length === 0) {
 }
 
 const salute = document.querySelector(".welcome")
-salute.innerHTML = `Hola ${userName}`
+salute.innerHTML = `Hi ${userName}`
 
 
 cardCreator();
